@@ -8,20 +8,20 @@ from fractions import Fraction as fraction
 
 def menu():
     start()
-    choice = input(" Selamat Datang \n Kalkulator Transformasi \n 1. Pencerminan \n 2. Translasi \n 3. Dilatasi \n 4. Rotasi \n 5. Rotasi dengan titik pusat selain (0,0) \n 0. Exit \n ")
+    choice = input(" Selamat Datang \n Kalkulator Transformasi \n 1. pencerminan \n 2. translasi \n 3. dilatasi \n 4. rotasi \n 5. rotasi dengan titik pusat selain (0,0) \n 0. Exit \n ")
     print()
     if choice == "1":
-        Pencerminan()
-        # masuk ke fungsi Pencerminan
+        pencerminan()
+        # masuk ke fungsi pencerminan
     elif choice == "2":
-        Translasi()
-        # masuk ke fungsi Translasi
+        translasi()
+        # masuk ke fungsi translasi
     elif choice == "3":
-        Dilatasi()
-        # masuk ke fungsi Dilatasi
+        dilatasi()
+        # masuk ke fungsi dilatasi
     elif choice == "4":
-        Rotasi()
-        # masuk ke fungsi Rotasi
+        rotasi()
+        # masuk ke fungsi rotasi
     elif choice == "5":
         rotasi_suatu_titik()
         # masuk ke fungsi rotasi suatu titik
@@ -29,9 +29,9 @@ def menu():
         out()
 
 
-def Pencerminan():
+def pencerminan():
         start()
-        choice = input(" Pilih Pencerminan \n 1. Terhadap sumbu X \n 2. Terhadap sumbu Y \n 3. Terhadap titik pusat \n 4. Terhadap garis Y=X \n 5. Terhadap garis Y=-X \n 6. Terhadap garis X = k \n 7. Terhadap garis Y = h \n 8. Back \n 0. Exit \n ")
+        choice = input(" Pilih pencerminan \n 1. Terhadap sumbu X \n 2. Terhadap sumbu Y \n 3. Terhadap titik pusat \n 4. Terhadap garis Y=X \n 5. Terhadap garis Y=-X \n 6. Terhadap garis X = k \n 7. Terhadap garis Y = h \n 8. back \n 0. Exit \n ")
         print()
         if choice == "1":
             terhadap_sb_x()
@@ -55,7 +55,7 @@ def Pencerminan():
             terhadap_garis_y_smdengan_h()
             # terhadap garis Y = h (suatu angka)
         elif choice == "8":
-            Back()
+            back()
         else:
             out()
 
@@ -70,7 +70,7 @@ def terhadap_sb_x():
         print()
         y_hasil = -1 * int(y_awal)
         print(f" Hasil pencerminan = ({x_awal}, {y_hasil})")
-        Pencerminan()
+        pencerminan()
 
 
 def terhadap_sb_y():
@@ -81,7 +81,7 @@ def terhadap_sb_y():
         print()
         x_hasil = -1 * int(x_awal)
         print(f' Hasil pencerminan = ({x_hasil}, {y_awal})' )
-        Pencerminan()
+        pencerminan()
 
 
 def zero():
@@ -93,7 +93,7 @@ def zero():
         x_hasil = -1 * int(x_awal)
         y_hasil = -1 * int(y_awal)
         print(f' Hasil pencerminan = ({x_hasil}, {y_hasil})' )
-        Pencerminan()
+        pencerminan()
 
 
 def terhadap_garis_y_smdengan_x():
@@ -104,7 +104,7 @@ def terhadap_garis_y_smdengan_x():
         x_hasil, y_hasil = y_hasil, x_hasil
         print()
         print(f' Hasil pencerminan = ({x_hasil}, {y_hasil})')
-        Pencerminan()
+        pencerminan()
 
 
 def terhadap_garis_y_smdengan_minusx():
@@ -118,7 +118,7 @@ def terhadap_garis_y_smdengan_minusx():
     print()
     x_hasil, y_hasil = y_hasil, x_hasil
     print(f' Hasil pencerminan = ({x_hasil}, {y_hasil})' )
-    Pencerminan()
+    pencerminan()
 
 
 def terhadap_garis_x_smdengan_k():
@@ -132,7 +132,7 @@ def terhadap_garis_x_smdengan_k():
     print()
     x_hasil = (2 * int(var_x))-int(x_awal)
     print(f' Hasil pencerminan terhadap garis X = {var_x}, adalah: ({x_hasil}, {y_awal})' )
-    Pencerminan()
+    pencerminan()
 
 
 def terhadap_garis_y_smdengan_h():
@@ -146,27 +146,27 @@ def terhadap_garis_y_smdengan_h():
     print()
     y_hasil = (2 * int(var_y)) - int(y_awal)
     print(f' Hasil pencerminan terhadap garis Y = {var_y}, adalah: ({x_awal}, {y_hasil})' )
-    Pencerminan()
+    pencerminan()
 
 
-def Translasi():
+def translasi():
     start()
-    choice = input(' Pilihan Translasi \n 1. Translasi \n 2. Back \n 3. Exit \n ')
+    choice = input(' Pilihan translasi \n 1. translasi \n 2. back \n 3. Exit \n ')
     print()
     if choice == "1":
         count_translasi()
         # hitung translasi
     elif choice == "2":
-        Back()
+        back()
     else:
         out()
 
 
 def count_translasi():
     start()
-    nilai_a = int(input(' Masukan nilai a Translasi (bagian atas) \n = '))
+    nilai_a = int(input(' Masukan nilai a translasi (bagian atas) \n = '))
     print()
-    nilai_b = int(input(' Masukan nilai b Translasi (bagian bawah) \n = '))
+    nilai_b = int(input(' Masukan nilai b translasi (bagian bawah) \n = '))
     print()
     x_awal = int(input(' Masukan nilai awal variabel x \n = '))
     print()
@@ -175,22 +175,22 @@ def count_translasi():
     x_hasil = int(nilai_a) + int(x_awal)  
     y_hasil = int(nilai_b) + int(y_awal) 
     print()
-    print(f' Hasil Translasi T({nilai_a}, {nilai_b}), adalah: ({x_hasil}, {y_hasil})')
-    Translasi()
+    print(f' Hasil translasi T({nilai_a}, {nilai_b}), adalah: ({x_hasil}, {y_hasil})')
+    translasi()
 
 
-def Dilatasi():
+def dilatasi():
     print()
     print(' Loading ..... ')
     print()
-    choice = input(' Pilihan Dilatasi \n 1. Dilatasi \n 2. Dilatasi dengan pusat selain (0,0) \n 3. Back \n 4. Exit \n ')
+    choice = input(' Pilihan dilatasi \n 1. dilatasi \n 2. dilatasi dengan pusat selain (0,0) \n 3. back \n 4. Exit \n ')
     print()
     if choice == "1":
         dilatasi_biasa()
     elif choice == "2":
         dilatasi_dengan_pusat_selain_nol()
     elif choice == "3":
-        Back()
+        back()
     else:
         out()
 
@@ -205,8 +205,8 @@ def dilatasi_biasa():
     print()
     x_hasil = skala_dilatasi * int(x_awal)
     y_hasil = skala_dilatasi * int(y_awal)
-    print(f' Hasil Dilatasi terhadap skala = {skala_dilatasi}, adalah: ({fraction(x_hasil)}, {fraction(y_hasil)})')
-    Dilatasi()
+    print(f' Hasil dilatasi terhadap skala = {skala_dilatasi}, adalah: ({fraction(x_hasil)}, {fraction(y_hasil)})')
+    dilatasi()
 
 
 def dilatasi_dengan_pusat_selain_nol(): 
@@ -223,13 +223,13 @@ def dilatasi_dengan_pusat_selain_nol():
     print()
     x_hasil = skala_dilatasi * (int(x_awal) - int(titik_pusat_a)) + int(titik_pusat_a)
     y_hasil = skala_dilatasi * (int(y_awal) - int(titik_pusat_b)) + int(titik_pusat_b)
-    print(f' Hasil Dilatasi terhadap skala = {skala_dilatasi}, dan titik pusat ({titik_pusat_a}, {titik_pusat_b}) adalah: \n ({fraction(x_hasil)}, {fraction(y_hasil)})' )
-    Dilatasi()
+    print(f' Hasil dilatasi terhadap skala = {skala_dilatasi}, dan titik pusat ({titik_pusat_a}, {titik_pusat_b}) adalah: \n ({fraction(x_hasil)}, {fraction(y_hasil)})' )
+    dilatasi()
 
 
-def Rotasi():
+def rotasi():
     start()
-    choice = input(' Pilih Rotasi \n 1. 90 derajat Searah Jarum Jam (-90 degree) \n 2. 90 derajat Berlawanan Arah Jarum Jam (90 degree) \n 3. 180 Derajat \n 4. 270 derajat Searah Jarum Jam (-270 degree) \n 5. 270 derajat Berlawanan Arah Jarum Jam (270 degree) \n 6. Back \n 7. Exit \n ')
+    choice = input(' Pilih rotasi \n 1. 90 derajat Searah Jarum Jam (-90 degree) \n 2. 90 derajat Berlawanan Arah Jarum Jam (90 degree) \n 3. 180 Derajat \n 4. 270 derajat Searah Jarum Jam (-270 degree) \n 5. 270 derajat Berlawanan Arah Jarum Jam (270 degree) \n 6. back \n 7. Exit \n ')
     print()
     if choice == "1":
         searah_90_derajat_jarum_jam()
@@ -247,7 +247,7 @@ def Rotasi():
         searah_90_derajat_jarum_jam()
         # karena 270 derajat = -90 derajat, maka masuk ke fungsi rotasi -90 derajat
     elif choice == "6":
-        Back()
+        back()
     else:
         out() 
 
@@ -259,10 +259,10 @@ def searah_90_derajat_jarum_jam():
     # y_hasil = -1 * int(x_awal) --------------------------------
     x_awal, y_awal = y_awal, x_awal
     y_hasil = -1 * int(y_awal)
-    result = f'Hasil Rotasi -90 atau 270 derajat = ({x_awal},{y_hasil}) '
+    result = f'Hasil rotasi -90 atau 270 derajat = ({x_awal},{y_hasil}) '
     print()
     print(result)
-    Rotasi()
+    rotasi()
 
 def berlawanan_90_derajat_jarum_jam():
     start()
@@ -272,9 +272,9 @@ def berlawanan_90_derajat_jarum_jam():
     # y_hasil = x #---------------------------------------
     x_awal, y_awal = y_awal, x_awal
     x_hasil = -1 * int(x_awal)
-    result = f"Hasil Rotasi 90 atau -270 derajat = ({x_hasil}, {y_awal}) "
+    result = f"Hasil rotasi 90 atau -270 derajat = ({x_hasil}, {y_awal}) "
     print(result)
-    Rotasi()
+    rotasi()
 
 def zero_1():
     start()
@@ -282,14 +282,14 @@ def zero_1():
     y_awal = int(input("Masukan nilai awal variabel y: \n "))
     x_hasil = int(x_awal) * -1
     y_hasil = int(y_awal) * -1
-    print(f'Hasil Rotasi 180 derajat = ({x_hasil}, {y_hasil}) ')
-    Rotasi()
+    print(f'Hasil rotasi 180 derajat = ({x_hasil}, {y_hasil}) ')
+    rotasi()
 
 def rotasi_suatu_titik():
     start()
     # belom jadi boss, masih maintenance hahahahahha
 
-def Back():
+def back():
         print()
         print(' Loading ... ')
         print()
@@ -309,4 +309,3 @@ def start():
 
 
 menu()
-
