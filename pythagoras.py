@@ -1,5 +1,4 @@
 #by M.A Hanif
-# menghapus import fractions
 import math
 
 def menu():
