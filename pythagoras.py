@@ -1,5 +1,7 @@
 #by M.A Hanif
 import fractions
+import math
+
 def menu():
     print()
     choice = input(' Kamu mau mencari apa ? \n 1. hipotenusa segitiga \n 2. tinggi segitiga \n 3. alas segitiga \n 4. luas Segitiga \n 5. Jenis Segitiga \n 6. tripel pythagoras \n 7. exit_out \n ')
@@ -24,7 +26,7 @@ def hipotenusa():
      print()
      t = input(' Masukan nilai tinggi dari segitiga: ')
      print()
-     import math
+
      print( ' Sisi miring atau hipotenusa =' ,math.sqrt( int(a) ** 2 + int(t) ** 2) )
      menu()
 
@@ -34,7 +36,6 @@ def tinggi():
     print()
     a = input(' Masukan nilai alas dari segitiga: ')
     print()
-    import math
     print(  ' tinggi =' ,math.sqrt( int(hipo) ** 2 - int(a) ** 2) )
     menu()
 
@@ -44,7 +45,6 @@ def alas():
     print()
     t = input(' Masukan nilai tinggi dari segitiga: ')
     print()
-    import math
     print( ' alas =' ,math.sqrt( int(hipo) ** 2 - int(t) ** 2) )
     menu()
 
