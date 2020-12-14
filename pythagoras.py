@@ -2,23 +2,23 @@
 import fractions
 def menu():
     print()
-    choice = input(' Kamu mau mencari apa ? \n 1. Hipotenusa segitiga \n 2. Tinggi segitiga \n 3. Alas segitiga \n 4. Luas Segitiga \n 5. Jenis Segitiga \n 6. Tripel pythagoras \n 7. Exit \n ')
+    choice = input(' Kamu mau mencari apa ? \n 1. hipotenusa segitiga \n 2. tinggi segitiga \n 3. alas segitiga \n 4. luas Segitiga \n 5. Jenis Segitiga \n 6. tripel pythagoras \n 7. exit_out \n ')
     if choice == '1':
-        Hipotenusa()
+        hipotenusa()
     elif choice == '2':
-        Tinggi()
+        tinggi()
     elif choice == '3':
-        Alas()
+        alas()
     elif choice == '4':
-        Luas()
+        luas()
     elif choice == '5':
-        Type()
+        tipe_segitiga()
     elif choice == '6':
-        Tripel()
+        tripel()
     else:
-        Exit()
+        exit_out()
 
-def Hipotenusa():
+def hipotenusa():
      print()
      a = input(' Masukan nilai alas dari segitiga: ')
      print()
@@ -28,36 +28,36 @@ def Hipotenusa():
      print( ' Sisi miring atau hipotenusa =' ,math.sqrt( int(a) ** 2 + int(t) ** 2) )
      menu()
 
-def Tinggi():
+def tinggi():
     print()
     hipo = input(' Masukan nilai hipotenusa dari segitiga: ')
     print()
     a = input(' Masukan nilai alas dari segitiga: ')
     print()
     import math
-    print(  ' Tinggi =' ,math.sqrt( int(hipo) ** 2 - int(a) ** 2) )
+    print(  ' tinggi =' ,math.sqrt( int(hipo) ** 2 - int(a) ** 2) )
     menu()
 
-def Alas():
+def alas():
     print()
     hipo = input(' Masukan nilai hipotenusa dari segitiga: ')
     print()
     t = input(' Masukan nilai tinggi dari segitiga: ')
     print()
     import math
-    print( ' Alas =' ,math.sqrt( int(hipo) ** 2 - int(t) ** 2) )
+    print( ' alas =' ,math.sqrt( int(hipo) ** 2 - int(t) ** 2) )
     menu()
 
-def Luas():
+def luas():
     print()
     a = input(' Masukan nilai alas dari segitiga: ')
     print()
     t = input(' Masukan nilai tinggi dari segitiga: ')
     print()
-    print( ' Luas Segitiga =' ,int(a) * int(t) / 2)
+    print( ' luas Segitiga =' ,int(a) * int(t) / 2)
     menu()
 
-def Type():
+def tipe_segitiga():
     print()
     hipo = input(' Masukan nilai sisi miring (nilai tertinggi) \n ' )
     print()
@@ -80,7 +80,7 @@ def Type():
        print(' Segitiga ini adalah segitiga tumpul ')
        menu()
 
-def Tripel():
+def tripel():
     print()
     hipo = input(' Masukan nilai sisi miring (nilai tertinggi) \n ')
     t = input(' Masukan nilai tinggi \n ')
@@ -97,7 +97,7 @@ def Tripel():
         menu()
 
 
-def Exit():
+def exit_out():
     print()
     print(' Terima Kasih ')
 
