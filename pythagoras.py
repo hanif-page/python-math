@@ -1,9 +1,12 @@
-#by M.A Hanif
+# by M.A Hanif
+# masih dirty code
+# masih perlu banyak revisi code
+ 
 import math
 
 def welcome(name):
     print(f'==========================================')
-    print(f'=========Selamat Datang {name}============')
+    print(f'======== Selamat Datang {name} ============')
     print(f'==========================================')
     print('program ini dibuat untuk membantu menyelesaikan masalah tentang sisi segitiga')
 
