@@ -11,7 +11,7 @@ def welcome(name):
     print('program ini dibuat untuk membantu menyelesaikan masalah tentang sisi segitiga')
 
 def menu(name):
-    choice = int(input(f'\n {name} mau mencari apa ? \n 1. Hipotenusa segitiga \n 2. Tinggi segitiga \n 3. Alas segitiga \n 4. Luas Segitiga \n 5. Jenis Segitiga \n 6. Tripel pythagoras \n 7. Exit \n '))
+    choice = int(input(f'\n {name} mau mencari apa ?\n 1. Hipotenusa segitiga \n 2. Tinggi segitiga \n 3. Alas segitiga \n 4. Luas Segitiga \n 5. Jenis Segitiga \n 6. Tripel pythagoras \n 7. Exit \n '))
     if choice == 1:
         hipotenusa()
         # masuk ke fungsi hipotenusa
