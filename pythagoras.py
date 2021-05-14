@@ -11,28 +11,30 @@ def welcome(name):
     print('program ini dibuat untuk membantu menyelesaikan masalah tentang sisi segitiga')
 
 def menu(name):
-    choice = int(input(f'\n {name} mau mencari apa ?\n 1. Hipotenusa segitiga \n 2. Tinggi segitiga \n 3. Alas segitiga \n 4. Luas Segitiga \n 5. Jenis Segitiga \n 6. Tripel pythagoras \n 7. Exit \n '))
-    if choice == 1:
-        hipotenusa()
-        # masuk ke fungsi hipotenusa
-    elif choice == 2:
-        tinggi()
-        # masuk ke fungsi tinggi
-    elif choice == 3:
-        alas()
-        # masuk ke fungsi alas
-    elif choice == 4:
-        luas()
-        # masuk ke fungsi luas
-    elif choice == 5:
-        tipe_segitiga()
-        # masuk ke fungsi tipe_segitiga
-    elif choice == 6:
-        tripel()
-        # masuk ke fungsi tripel
-    else:
-        exit_out(name)
-        # masuk ke fungsi exit_out
+    while True:
+        choice = int(input(
+            f'\n {name} mau mencari apa ?\n 1. Hipotenusa segitiga \n 2. Tinggi segitiga \n 3. Alas segitiga \n 4. Luas Segitiga \n 5. Jenis Segitiga \n 6. Tripel pythagoras \n 7. Exit \n '))
+        if choice == 1:
+            hipotenusa()
+            # masuk ke fungsi hipotenusa
+        elif choice == 2:
+            tinggi()
+            # masuk ke fungsi tinggi
+        elif choice == 3:
+            alas()
+            # masuk ke fungsi alas
+        elif choice == 4:
+            luas()
+            # masuk ke fungsi luas
+        elif choice == 5:
+            tipe_segitiga()
+            # masuk ke fungsi tipe_segitiga
+        elif choice == 6:
+            tripel()
+            # masuk ke fungsi tripel
+        elif choice == 7:
+            exit_out(name)
+            # masuk ke fungsi exit_out
 
 def hipotenusa(): 
     # fungsi ini berguna untuk menghitung besar sisi miring sebuah segitiga
